@@ -3,11 +3,9 @@ name: Java CI
 on:
   push:
       branches: [ main ]
-  pull_request:
-      branches: [ main ]
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +21,6 @@ jobs:
         with:
           name: Package
           path: staging
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: staging/*.jar
