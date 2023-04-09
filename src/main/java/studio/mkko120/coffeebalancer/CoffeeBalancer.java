@@ -20,7 +20,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Plugin(
-        id = "CoffeeBalancer",
+        id = "coffeebalancer",
         name = "CoffeeBalancer",
         version = "1.0-SNAPSHOT",
         url = "mkko120.pl",
