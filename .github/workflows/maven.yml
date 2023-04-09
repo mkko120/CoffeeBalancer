@@ -1,8 +1,6 @@
 name: Java CI
 
-on:
-  push:
-      branches: [ main ]
+on: push
 
 jobs:
   release:
@@ -22,5 +20,6 @@ jobs:
           name: Package
           path: staging
       - uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: staging/*.jar
